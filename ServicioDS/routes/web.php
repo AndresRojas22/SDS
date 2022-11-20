@@ -17,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::middleware('auth')->group(function(){
+//Route::middleware('auth')->group(function(){
     Route::get('/storage', function () {
         return view('admin.storage');
     });
-});
+// });
+
+Route::get('/products',function(){
+    return view('products.menu');
+})->name('products.menu');

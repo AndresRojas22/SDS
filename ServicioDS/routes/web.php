@@ -15,14 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 
 
+    Route::get('/products',function(){
+        return view('products.menu');
+    })->name('products.menu');
+
+
+ Route::get('/storage', function () {
+    return view('admin.storage');
+});
+
 Auth::routes();
 
-//Route::middleware('auth')->group(function(){
-    Route::get('/storage', function () {
-        return view('admin.storage');
-    });
-// });
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/products',function(){
-    return view('products.menu');
-})->name('products.menu');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -10,6 +10,10 @@ Route::middleware('auth')->group(function(){
         return view('Products.menu');
     })->name('products.menu');
 
+    Route::get('/products/micarrito',function(){
+        return view('Products.Carrito');
+    })->name('products.Carrito');
+
     Route::get('/almacen', function () {
     return view('Admin.Almacen');
     })->name('admin.Almacen');

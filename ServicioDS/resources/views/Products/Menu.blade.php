@@ -44,15 +44,13 @@
           </ul>
         </li>
           <li class="nav-item">
-            <a class="nav-link active" href="">Productos </a>
+            <a class="nav-link active" href="{{ route('products.menu') }}">Productos </a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="">Ofertas</a>
-          </li>
+          
         </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-        <a class="nav-link" href="">Mi carrito</a>
+        <a class="nav-link" href="{{ route('products.Carrito') }}">Mi carrito</a>
         </li>
         </ul>
         <form class="d-flex">
@@ -380,11 +378,12 @@
         
       
           <div class="col">
-            <h4><strong>Navegar</strong></h4>
+            <h4><strong>{{auth()->user()->name}}</strong></h4>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted">Iniciar sesion</a></li>
-              <li class="nav-item mb-2"><a href="" class="nav-link-active p-0 text-muted">Productos</a></li>
-              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted">Ofertas</a></li>
+              
+              <li class="nav-item mb-2"><a href="javascript:document.getElementById('logout').submit()" class="nav-link p-0 text-muted">Cerrar Sesion</a></li>
+              <li class="nav-item mb-2"><a href="{{ route('products.menu') }}" class="nav-link-active p-0 text-muted">Productos</a></li>
+              <li class="nav-item mb-2"><a href="{{ route('products.Carrito') }}" class="nav-link p-0 text-muted">Mi carrito</a></li>
             </ul>
           </div>
       

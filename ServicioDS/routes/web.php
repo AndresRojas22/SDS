@@ -12,8 +12,8 @@ Route::middleware('auth')->group(function(){
 
 
  Route::get('/storage', function () {
-    return view('admin.storage');
-});
+    return view('admin.Almacen');
+})->name('admin.Almacen');
 });
 
 Auth::routes();

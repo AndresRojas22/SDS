@@ -31,13 +31,16 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Iniciar sesion
+            Bienvenido, {{auth()->user()->name}}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+            <li><a class="dropdown-item" href="#">{{auth()->user()->name}}</a></li>
             <li><a class="dropdown-item" href="#">Mis pedidos</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+            <li><a class="dropdown-item" href="javascript:document.getElementById('logout').submit()">Cerrar sesion</a></li>
+            <form action="{{route('logout')}}" id="logout" style="display:none" method="post">
+              @csrf
+            </form>
           </ul>
         </li>
           <li class="nav-item">

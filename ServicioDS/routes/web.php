@@ -2,18 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Products;
+use App\Models\Products;
 
 
 Route::middleware('auth')->group(function(){
     Route::get('/products',function(){
-        return view('products.menu');
+        return view('Products.menu');
     })->name('products.menu');
 
+    Route::get('/almacen', function () {
+    return view('Admin.Almacen');
+    })->name('admin.Almacen');
 
- Route::get('/storage', function () {
-    return view('admin.storage');
-});
+    Route::get('/almacen/create',function(){
+        return view('Admin.create');
+    })->name('admin.Create');
+
 });
 
 Auth::routes();

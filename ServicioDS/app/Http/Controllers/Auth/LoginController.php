@@ -52,7 +52,7 @@ class LoginController extends Controller
     public function redirectPath()
     {
         if(Auth::user()->tipo_usuario){
-            return 'Admin.Almacen';
+            return "/almacen";
         }
         return '/products';
     }

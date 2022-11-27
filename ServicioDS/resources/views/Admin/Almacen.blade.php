@@ -14,6 +14,7 @@
                         @endif
                         <table class="table table-hover table-md">
                             <thead>
+                                <th>Nombre</th>
                                 <th>Descripcion</th><br>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
@@ -22,6 +23,9 @@
                             <tbody>
                                 {{-- @foreach($products as $product)
                                 <tr>
+                                <td>
+                                        {{ $product->nombre }}
+                                    </td>
                                     <td>
                                         {{ $product->description }}
                                     </td>

@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'Nombre',
+        'Descripcion',
+        'Precio',
+        'Cantidad',
+        'Proveedor'
+    ];
 }

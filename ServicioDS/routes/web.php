@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Products;
-
+use App\Http\Controllers\ProductController;
 
 Route::middleware('auth')->group(function(){
     Route::get('/products',function(){
@@ -27,5 +27,5 @@ Route::middleware('auth')->group(function(){
 Auth::routes();
 
 Auth::routes();
-
+Route::resource('createP', ProductController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

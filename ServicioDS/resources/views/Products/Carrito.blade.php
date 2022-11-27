@@ -13,9 +13,7 @@
         </style>
      <link rel="shortcut icon" href="IMG/icono.ico"/>
   </head>
-  <body class="antialiased bg-light" style="display: flex;
-  min-height: 100vh;
-  flex-direction: column;">
+  <body class="antialiased bg-light" style="display: flex; min-height: 100vh; flex-direction: column;">
   {{--* Division de Cabecera  --}}
   <header>
   {{--* Division de NAVBAR  --}}
@@ -63,8 +61,7 @@
 
   </header>
 <container>
-
-              
+            
 </container>
 
 <footer class="bg-dark text-white">

@@ -8,8 +8,12 @@
                     Crear de producto
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="{{ route('createP.store') }}" method="post">
                         @csrf
+                        <div class="form-group">
+                            <label for="">Nombre</label>
+                            <input type="text" class="form-control" name ="Nombre"><br>
+                        </div>
                         <div class="form-group">
                             <label for="">Descripcion</label>
                             <input type="text" class="form-control" name ="Descripcion"><br>

@@ -13,3 +13,22 @@ import './bootstrap';
  */
 
 import './components/Example';
+
+const items = document.getElementById('items')
+const templateCard = document.getElementById('template-card')
+const fragment = document.createDocumentFragment()
+
+//
+
+const fechtData = async () => {
+    try{
+        const re = await fetch()
+        const data = await re.jason()
+
+        pintarCards(data)
+
+    } catch (error){
+        console.lod(error)
+    }
+
+}

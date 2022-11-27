@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/resources'),
             'throw' => false,
         ],
 
@@ -54,6 +54,10 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
+        ],
+        'resources' => [
+            'driver' => 'local',
+            'root' => base_path('resources/js'), 
         ],
 
     ],

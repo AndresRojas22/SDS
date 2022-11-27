@@ -63,7 +63,7 @@
 
   </header>
 <container>
-{{--* Division de Slider  --}}
+  {{--* Division de Slider  --}}
 <div class="container">
 <div class="col">
 
@@ -102,263 +102,34 @@
 
 </div>
 </div>
-
-
-                <br>
+<br>
 {{--* Division de cartas  --}}
-            <div class="container-fluid">
-            <div class="row">
-              <div class="col-1">
-
-              </div>
-              <div class=" row col-10">
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                <img src="IMG/CARDS/1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6 class="card-title"><strong>Smirnoff (edicion especial).</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                <img src="IMG/CARDS/2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6 class="card-title"><strong>Jack Daniel's Whisky.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                 <img src="IMG/CARDS/3.png" class="card-img-top" alt="...">
-                 <div class="card-body">
-                  <h6 class="card-title"><strong>Four loko.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                 <img src="IMG/CARDS/4.png" class="card-img-top" alt="...">
-                 <div class="card-body">
-                  <h6 class="card-title"><strong>SKYY Vodka.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-              
-              </div>
+            <div class="container">
+              <hr>
+              <div class="row" id="items"></div>
             </div>
-              <div class="col-1">
 
+            <template id="template-card">
+              <div class="col-12 mb-2 col-md-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="" class="card-img-top">
+                   <div class="card-body">
+                      <h6 class="card-title"><strong>Titulo</strong></h6>
+                      <p class="text-secondary">Descripcion</p>
+                      <ul class="list-group list-group">
+                        <span class=""><h4 class="text-success">Precio</h4></span>
+                        <span class="text-muted">Envio gratis</span>
+                      </ul>
+                     </div>
+                     <div class="card-body">
+                     <button type="button" class="btn btn-success">Comprar ahora</button>
+                        <button type="button" class="btn btn-info" id="carrito"><strong>+</strong></button>
+                     </div>
+                </div>
               </div>
-                <br>
-                <div class="row">
-              <div class="col-1">
-
-              </div>
-              <div class=" row col-10">
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                <img src="IMG/CARDS/5.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6 class="card-title"><strong>Doce pack Corona Extra.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                <img src="IMG/CARDS/6.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6 class="card-title"><strong>Caguama Victoria</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                 <img src="IMG/CARDS/7.png" class="card-img-top" alt="...">
-                 <div class="card-body">
-                  <h6 class="card-title"><strong>Doce pack Michelob Ultra</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                 <img src="IMG/CARDS/8.png" class="card-img-top" alt="...">
-                 <div class="card-body">
-                  <h6 class="card-title"><strong>Vina Maipo</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
+            </template>
               
-              </div>
-            </div>
-              <div class="col-1">
-
-              </div>
-                <br>
-                <div class="row">
-              <div class="col-1">
-
-              </div>
-              <div class=" row col-10">
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                <img src="IMG/CARDS/9.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6 class="card-title"><strong>Torres 5.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                <img src="IMG/CARDS/10.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6 class="card-title"><strong>Black & White</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                 <img src="IMG/CARDS/11.png" class="card-img-top" alt="...">
-                 <div class="card-body">
-                  <h6 class="card-title"><strong>Black & White Orange.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-bg-light" style="width: 18rem;">
-                 <img src="IMG/CARDS/12.png" class="card-img-top" alt="...">
-                 <div class="card-body">
-                  <h6 class="card-title"><strong>Kosako Vodka.</strong></h6>
-                 <p class="card-text text-secondary">Combina tu bebida con agua mineral y un refresco.</p>
-                 <ul class="list-group list-group">
-                     <span class=""><h4 class="text-success">$ 350.00</h4></span>
-                    <span class="text-muted">Envio gratis</span>
-                    </ul>
-                     </div>
-                    <div class="card-body">
-                    <button type="button" class="btn btn-success">Comprar ahora</button>
-                    <button type="button" class="btn btn-info"><strong>+</strong></button>
-                </div>
-                </div>
-                </div>
-              
-              </div>
-            </div>
-              <div class="col-1">
-
-              </div>
-                <br>
-            </div>
-              
-</container>
+</container><br>
 
 <footer class="bg-dark text-white">
 
@@ -396,6 +167,8 @@
           </div>
       
         </footer>
+        <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
   </body>
 </html>

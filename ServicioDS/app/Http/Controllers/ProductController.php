@@ -48,10 +48,15 @@ class ProductController extends Controller
         $product->Precio;
         $product->Cantidad;
         $product->Proveedor;
+        
+        $imagenes = $request->file('Ruta')->store('IMG');
+        $url = Storage::url($imagenes);
+        $product->Ruta =$url;
         $product->save();
-        $product = Product::all('Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor');
+        $product = Product::all('Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
         $collectionproducts = collect(['products'=>$product]);
         Storage::disk('resources')->put('products.json', $product);
+        
         return redirect()->action([ProductController::class, 'index']);
         
     }

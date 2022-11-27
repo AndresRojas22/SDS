@@ -8,7 +8,7 @@
                     Crear de producto
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('createP.store') }}" method="post">
+                    <form action="{{ route('createP.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="">Nombre</label>
@@ -30,6 +30,10 @@
                             <label for="">Proveedor</label>
                             <input type="text" class="form-control" name ="Proveedor"><br>
                         </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Agregar imagen</label>
+                            <input type="file" class="form-control" name="Ruta" accept="image/*" >
+                        </div><br>
                         <button type="submit" class = "btn btn-primary">Guardar</button>
                         <a href="{{route('admin.Almacen')}}" class = "btn btn-danger">Cancelar</a>
                     </form>

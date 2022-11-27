@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app/resources'),
+            'root' => storage_path('app/public'),
             'throw' => false,
         ],
 
@@ -57,9 +57,12 @@ return [
         ],
         'resources' => [
             'driver' => 'local',
-            'root' => base_path('resources/js'), 
+            'root' => base_path('/public'), 
         ],
-
+        'img' => [
+            'driver' => 'local',
+            'root' => base_path('/public/RUTAS'), 
+        ],
     ],
 
     /*

@@ -18,6 +18,7 @@ class Product extends Model
         'Descripcion',
         'Precio',
         'Cantidad',
-        'Proveedor'
+        'Proveedor',
+        'Ruta'
     ];
 }

@@ -110,21 +110,20 @@
             </div>
 
             <template id="template-card">
-              <div class="col-12 mb-2 col-md-4">
+              <div class="col-12 mb-2 col-md-6 col-lg-3">
                 <div class="card" style="width: 18rem;">
                   <img src="" class="card-img-top">
                    <div class="card-body">
                       <h6 class="card-title"><strong>Titulo</strong></h6>
                       <p class="text-secondary">Descripcion</p>
                       <ul class="list-group list-group">
-                        <span class=""><h4 class="text-success">Precio</h4></span>
+                        <span class=""><h4 class="text-success">$ <span class="precio">Precio</span></h4></span>
                         <span class="text-muted">Envio gratis</span>
                       </ul>
+                        <button type="button" class="btn btn-success">Comprar ahora</button>
+                        <button type="button" class="btn btn-info" id="carrito">+</button>
                      </div>
-                     <div class="card-body">
-                     <button type="button" class="btn btn-success">Comprar ahora</button>
-                        <button type="button" class="btn btn-info" id="carrito"><strong>+</strong></button>
-                     </div>
+                     
                 </div>
               </div>
             </template>
@@ -134,7 +133,7 @@
 <footer class="bg-dark text-white">
 
       <div class="container">
-        <footer class="row row-cols-5 py-5 my-5 border-top align-items-end">
+        <footer class="row row-cols-lg-5 row-cols-sm-1 row-cols-sm-3 py-5 my-5 border-top align-items-end">
         <div class="col">
       
       </div>

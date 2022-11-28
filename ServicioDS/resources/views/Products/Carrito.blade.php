@@ -11,7 +11,7 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-     <link rel="shortcut icon" href="IMG/icono.ico"/>
+     <link rel="shortcut icon" href="/IMG/icono.ico"/>
   </head>
   <body class="antialiased bg-light" style="display: flex; min-height: 100vh; flex-direction: column;">
   {{--* Division de Cabecera  --}}
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{ route('products.menu') }}">
-          <img src="IMG/logo.png" alt="SDS" width="60px">
+          <img src="/IMG/logo.png" alt="SDS" width="60px">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,39 @@
 
   </header>
 <container>
-            
+  <div class="container">
+    hola
+    <div class="items"></div>
+  </div>
+<template>
+    <div class="my-5">
+        <h4>Carrito de compras</h4>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody id="items">
+                <Items
+                    v-for="item in carrito" :key="item.id"
+                    :item="item"
+                />
+            </tbody>
+            <tfoot>
+            <tr id="footer-carrito">
+                <th scope="row" colspan="5" v-if="Object.keys(carrito).length === 0">Carrito vacío - comience a comprar!</th>
+                <Footer v-else/>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</template>
+      
 </container>
 
 <footer class="bg-dark text-white">
@@ -74,7 +106,7 @@
           <div class="col">
             <a href="" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
               <svg class="bi me-2" width="0" height="32"><use xlink:href="#bootstrap"></use></svg>
-              <img src="IMG/logo.png" alt="SDS" width="90px">
+              <img src="/IMG/logo.png" alt="SDS" width="90px">
             </a>
             <p class="text-muted">    SDS © 2022</p>
           </div>
@@ -93,12 +125,13 @@
           <div class="col">
             <h5><strong>Visitanos</strong></h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href=""  class = " nav-link p-0 text-muted"><img src="IMG/FOOTER/f.png" width="25px"></a></li>
-              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted"><img src="IMG/FOOTER/i.png" width="25px"></a></li>
+              <li class="nav-item mb-2"><a href=""  class = " nav-link p-0 text-muted"><img src="/IMG/FOOTER/f.png" width="25px"></a></li>
+              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted"><img src="/IMG/FOOTER/i.png" width="25px"></a></li>
             </ul>
           </div>
       
         </footer>
+    <script src="/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -44,6 +44,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $products = new Product($request->all());
+        $products->id;
         $products->Nombre;
         $products->Descripcion;
         $products->Precio;
@@ -54,14 +55,12 @@ class ProductController extends Controller
         $url = Storage::url($imagenes);
         $products->Ruta =$url;
         $products->save();
-        $products = Product::all('Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
+        $products = Product::all('id','Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
         $collectionproducts = collect(['products'=>$products]);
         Storage::disk('resources')->put('products.json', $products);
-        
         return redirect()->action([ProductController::class, 'index']);
         
     }
-
     /**
      * Display the specified resource.
      *
@@ -105,6 +104,9 @@ class ProductController extends Controller
     public function destroy(Product $id)
     {
         $id->delete();
+        $products = Product::all('id','Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
+        $collectionproducts = collect(['products'=>$products]);
+        Storage::disk('resources')->put('products.json', $products);
         return redirect()->route('admin.Almacen');
     }
 }

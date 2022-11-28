@@ -18,35 +18,39 @@
                                 <th>Descripcion</th><br>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
+                                <th>Cantidad</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>
-                                {{-- @foreach($products as $product)
+                                @foreach($products as $product)
                                 <tr>
                                 <td>
-                                        {{ $product->nombre }}
+                                        {{ $product->Nombre }}
                                     </td>
                                     <td>
-                                        {{ $product->description }}
+                                        {{ $product->Descripcion }}
                                     </td>
                                     <td>
-                                        {{ $product->price }} --}}
+                                        {{ $product->Precio }}
                                     </td>
                                     <td>
-                                        {{-- $product->price --}}
+                                        {{ $product->Cantidad }}
+                                    </td>
+                                    <td>
+                                        {{ $product->Proveedor }}
                                     </td>
                                     <td>
                                         {{-- <a href="{{route('products.edit',$product->id)}}"  --}} class="btn btn-warning btn-sm">Actualizar</a>
 
-                                        {{-- <a href="javascript: document.getElementById('delete-{{$product->id }}').submit()"  --}} class="btn btn-danger btn-sm">Eliminar</a>
-
-                                        {{-- <form id="delete-{{$product->id }}"  --}} {{-- action="{{ route('products.destroy', $product->id)}}"  --}} method = "POST">
+                                        
+                                        <form action="{{ route('products.destroy', $product)}}" method = "POST">
+                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                             @method('delete')
                                             @csrf 
                                         </form>
                                     </td>
                                 </tr>
-                                {{-- @endforeach --}}
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

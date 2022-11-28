@@ -69,7 +69,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -78,9 +78,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        return view('Admin.edit',compact('product'));
     }
 
     /**
@@ -90,9 +90,16 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request ,Product $product)
     {
-        //
+        $product->Nombre = $request->Nombre;
+        $product->Descripcion = $request->Descripcion;
+        $product->Precio = $request->Precio;
+        $product->Cantidad = $request->Cantidad;
+        $product->Proveedor = $request->Proveedor;
+
+        $product->save();
+        return redirect()->action([ProductController::class, 'index']);
     }
 
     /**

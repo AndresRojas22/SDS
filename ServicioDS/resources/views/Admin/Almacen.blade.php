@@ -40,10 +40,9 @@
                                         {{ $product->Proveedor }}
                                     </td>
                                     <td>
-                                        {{-- <a href="{{route('products.edit',$product->id)}}"  --}} class="btn btn-warning btn-sm">Actualizar</a>
-
                                         
                                         <form action="{{ route('products.destroy', $product)}}" method = "POST">
+                                            <a href="{{route('products.edit',$product)}}" class="btn btn-warning btn-sm">Actualizar</a>
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                             @method('delete')
                                             @csrf 

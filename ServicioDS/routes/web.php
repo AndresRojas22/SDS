@@ -27,6 +27,10 @@ Route::middleware('auth')->group(function(){
 
     Route::delete('/almacen/{id}',[ProductController::class,'destroy'])->name('products.destroy');    
 
+    Route::get('/almacen/{product}/edit',[ProductController::class,'edit'])->name('products.edit');
+
+    Route::put('/almacen/{product}',[ProductController::class,'update'])->name('products.update');
+
 });
 
 Auth::routes();

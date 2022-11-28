@@ -21,7 +21,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.Almacen');
+        $products = Product::orderBy('created_at','desc')->get();
+        return view('Admin.Almacen',compact('products'));
     }
 
     /**
@@ -42,21 +43,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product($request->all());
-        $product->id;
-        $product->Nombre;
-        $product->Descripcion;
-        $product->Precio;
-        $product->Cantidad;
-        $product->Proveedor;
+        $products = new Product($request->all());
+        $products->Nombre;
+        $products->Descripcion;
+        $products->Precio;
+        $products->Cantidad;
+        $products->Proveedor;
         
         $imagenes = $request->file('Ruta')->store('IMG');
         $url = Storage::url($imagenes);
-        $product->Ruta =$url;
-        $product->save();
-        $product = Product::all('id','Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
-        $collectionproducts = collect(['products'=>$product]);
-        Storage::disk('resources')->put('products.json', $product);
+        $products->Ruta =$url;
+        $products->save();
+        $products = Product::all('Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
+        $collectionproducts = collect(['products'=>$products]);
+        Storage::disk('resources')->put('products.json', $products);
         
         return redirect()->action([ProductController::class, 'index']);
         
@@ -102,8 +102,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $id)
     {
-        //
+        $id->delete();
+        return redirect()->route('admin.Almacen');
     }
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Models\Products;
+use App\Models\Product;
 use App\Http\Controllers\ProductController;
 
 Route::middleware('auth')->group(function(){
@@ -15,17 +15,20 @@ Route::middleware('auth')->group(function(){
     })->name('products.Carrito');
 
     Route::get('/almacen', function () {
-    return view('Admin.Almacen');
+    $products = Product::orderBy('created_at','desc')->get();
+    return view('Admin.Almacen',compact('products'));
     })->name('admin.Almacen');
 
     Route::get('/almacen/create',function(){
         return view('Admin.create');
     })->name('admin.Create');
 
+    Route::resource('createP', ProductController::class);
+
+    Route::delete('/almacen/{id}',[ProductController::class,'destroy'])->name('products.destroy');    
+
 });
 
 Auth::routes();
-
 Auth::routes();
-Route::resource('createP', ProductController::class);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

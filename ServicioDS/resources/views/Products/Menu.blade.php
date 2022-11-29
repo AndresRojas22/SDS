@@ -120,7 +120,7 @@
                         <span class=""><h4 class="text-success">$ <span class="precio">Precio</span></h4></span>
                         <span class="text-muted">Envio gratis</span>
                       </ul>
-                        <button type="button" class="btn btn-success">Comprar ahora</button>
+                        <a href="{{route('products.Buy')}}"><button type="button" class="btn btn-success">Comprar ahora</button></a>
                         <button type="button" class="btn btn-info" id="carrito">+</button>
                      </div>
                      

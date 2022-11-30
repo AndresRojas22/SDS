@@ -14,6 +14,11 @@ Route::middleware('auth')->group(function(){
         return view('Products.Carrito');
     })->name('products.Carrito');
 
+    Route::get('/products/checkout',function(){
+        $products = Product::all();
+        return view('Products.Buy',compact('products'));
+    })->name('products.Buy');
+
     Route::get('/almacen', function () {
     $products = Product::orderBy('created_at','desc')->get();
     return view('Admin.Almacen',compact('products'));

@@ -110,7 +110,7 @@
             </div>
 
             <template id="template-card">
-              <div class="col-12 mb-2 col-md-6 col-lg-3">
+              <div class="col-12 mb-2 col-md-6 col-lg-4">
                 <div class="card" style="width: 18rem;">
                   <img src="" class="card-img-top">
                    <div class="card-body">
@@ -121,7 +121,7 @@
                         <span class="text-muted">Envio gratis</span>
                       </ul>
                         <button type="button" class="btn btn-success">Comprar ahora</button>
-                        <button type="button" class="btn btn-info" id="carrito">+</button>
+                        <button type="button" class="btn btn-info">+</button>
                      </div>
                      
                 </div>
@@ -167,6 +167,7 @@
       
         </footer>
         <script src="app.js"></script>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     
   </body>

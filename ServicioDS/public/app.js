@@ -1,4 +1,5 @@
 const items = document.getElementById('items')
+
 const templateCard = document.getElementById('template-card').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
@@ -66,10 +67,17 @@ const setCarrito = objeto =>{
     }
     if(carrito.hasOwnProperty(producto.id))
     {
-        producto.Cantidad = carrito[producto.id].Cantidad + 1 
+        if(producto.Cantidad <= producto.Disponible){
+            producto.Cantidad = carrito[producto.id].Cantidad + 1 
+        }
+
+        
     }
 
     carrito[producto.id] = {...producto}
-
+    
     console.log(carrito)
 }
+console.log(carrito)
+
+//Seccion Guardar

@@ -61,38 +61,8 @@
 
   </header>
 <container>
-  <div class="container">
-    hola
-    <div class="items"></div>
-  </div>
-<template>
-    <div class="my-5">
-        <h4>Carrito de compras</h4>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Item</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Acción</th>
-                <th scope="col">Total</th>
-            </tr>
-            </thead>
-            <tbody id="items">
-                <Items
-                    v-for="item in carrito" :key="item.id"
-                    :item="item"
-                />
-            </tbody>
-            <tfoot>
-            <tr id="footer-carrito">
-                <th scope="row" colspan="5" v-if="Object.keys(carrito).length === 0">Carrito vacío - comience a comprar!</th>
-                <Footer v-else/>
-            </tr>
-            </tfoot>
-        </table>
-    </div>
-</template>
+  
+<template class="template-card">
       
 </container>
 

@@ -183,7 +183,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn btn-primary btn-md float-end">Finalizar compra</button>
+                    <a href="{{route('products.method')}}" class="btn btn-primary btn-md float-end">Finalizar compra</a>
                     <br><br>
                     <hr>
             </div>

@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
 Route::middleware('auth')->group(function(){
@@ -27,6 +27,14 @@ Route::middleware('auth')->group(function(){
     Route::get('/almacen/create',function(){
         return view('Admin.create');
     })->name('admin.Create');
+
+    Route::get('/products/checkout/method', function(){
+        return view('products.Method');
+    })->name('products.method');
+
+    Route::get('/products/checkout/method/payment', function(){
+        return view('products.PaymentC');
+    })->name('products.PaymentC');
 
     Route::resource('createP', ProductController::class);
 

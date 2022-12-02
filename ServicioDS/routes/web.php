@@ -7,7 +7,8 @@ use App\Http\Controllers\ProductController;
 
 Route::middleware('auth')->group(function(){
     Route::get('/products',function(){
-        return view('Products.menu');
+    $products = Product::all();
+    return view('Products.Menu',compact('products'));
     })->name('products.menu');
 
     Route::get('/products/micarrito',function(){
@@ -37,6 +38,8 @@ Route::middleware('auth')->group(function(){
     })->name('products.PaymentC');
 
     Route::resource('createP', ProductController::class);
+
+    
 
     Route::delete('/almacen/{id}',[ProductController::class,'destroy'])->name('products.destroy');    
 

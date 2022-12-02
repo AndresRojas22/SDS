@@ -106,35 +106,38 @@
 {{--* Division de cartas  --}}
             <div class="container">
               <hr>
-              <div class="row" id="items"></div>
-            </div>
-
-            <template id="template-card">
+              <div class="row" id="items">
+              @foreach($products as $product)
               <div class="col-12 mb-2 col-md-6 col-lg-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="" class="card-img-top">
-                  <form action="{{route('products.Buys')}}" method="post">
+                  <img src="{{ $product->Ruta }}" class="card-img-top">
+                  <form action="{{route('products.Buy')}}" method="get">
                     @csrf
                    <div class="card-body">
-                      <input type="hidden" name="Nombre" value="Nombre" ><h6 class="card-title"><strong>Titulo</strong></h6>
-                      <p class="text-secondary">Descripcion</p>
+                      <input type="hidden" name="Nombre" value="{{$product->Nombre}}" id=""><h6 class="card-title"><strong>{{ $product->Nombre }}</strong></h6>
+                      <p class="text-secondary" id="">{{ $product->Descripcion }}</p>
                       <ul class="list-group list-group">
-                        <input type="hidden" name="Precio" value="5"><span class=""><h4 class="text-success">$ <span class="precio">Precio</span></h4></span>
+                        <input type="hidden" name="Precio" value="5"><span class="" id= ""><h4 class="text-success">$ {{ $product->Precio }}<span class="precio"></span></h4></span>
                         <span class="text-muted">Envio gratis</span>                      
                         
-                          <label for="Cantidad">Cantidad</label>
+                          <label for="Cantidad" id="{{ $product->Cantidad }}" value = "{{ $product->Cantidad }}"></label>
                           <input type="number" max="9" name="Cantidad" value="0">
                           <br>
-                          <button type="submit" class="btn btn-success">Comprar ahora</button></a>
+                          <button type="submit" class="btn btn-success" id="{{ $product->id }}" href="" onclick="">Comprar ahora</button></a>
                         </form>
                       </ul>
-                        <br>
-                        <button type="" class="btn btn-info" id="carrito"></button>
+                      
                      </div>
                      
                 </div>
               </div>
-            </template>
+              @endforeach
+              </div>
+            </div>
+            
+      
+            
+           
               
 </container><br>
 

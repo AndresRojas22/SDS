@@ -23,7 +23,7 @@
                 text-transform: capitalize;
             }
         </style>
-     <link rel="shortcut icon" href="IMG/icono.ico" />
+     <link rel="shortcut icon" href="/IMG/icono.ico" />
   </head>
   <body class="antialiased bg-light" style="display: flex;
   min-height: 100vh;
@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-          <img src="IMG/logo.png" alt="SDS" width="60px">
+          <img src="/IMG/logo.png" alt="SDS" width="60px">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -199,7 +199,7 @@
           <div class="col">
             <a href="" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
               <svg class="bi me-2" width="0" height="32"><use xlink:href="#bootstrap"></use></svg>
-              <img src="IMG/logo.png" alt="SDS" width="90px">
+              <img src="/IMG/logo.png" alt="SDS" width="90px">
             </a>
             <p class="text-muted">    SDS © 2022</p>
           </div>
@@ -219,8 +219,8 @@
           <div class="col">
             <h5><strong>Visitanos</strong></h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href=""  class = " nav-link p-0 text-muted"><img src="IMG/FOOTER/f.png" width="25px"></a></li>
-              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted"><img src="IMG/FOOTER/i.png" width="25px"></a></li>
+              <li class="nav-item mb-2"><a href=""  class = " nav-link p-0 text-muted"><img src="/IMG/FOOTER/f.png" width="25px"></a></li>
+              <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted"><img src="/IMG/FOOTER/i.png" width="25px"></a></li>
             </ul>
           </div>
       

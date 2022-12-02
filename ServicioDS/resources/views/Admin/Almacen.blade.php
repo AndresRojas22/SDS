@@ -18,7 +18,7 @@
                                 <th>Descripcion</th><br>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
-                                <th>Cantidad</th>
+                                <th>Proveedor</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>

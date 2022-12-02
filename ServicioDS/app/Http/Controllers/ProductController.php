@@ -55,6 +55,7 @@ class ProductController extends Controller
         $url = Storage::url($imagenes);
         $products->Ruta =$url;
         $products->save();
+        
         $products = Product::all('id','Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
         $collectionproducts = collect(['products'=>$products]);
         Storage::disk('resources')->put('products.json', $products);
@@ -67,6 +68,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         
@@ -97,11 +99,18 @@ class ProductController extends Controller
         $product->Precio = $request->Precio;
         $product->Cantidad = $request->Cantidad;
         $product->Proveedor = $request->Proveedor;
-
+        
+        $imagenes = $request->file('Ruta')->store('IMG');
+        $url = Storage::url($imagenes);
+        $product->Ruta =$url;
         $product->save();
+        $products = Product::all('id','Nombre', 'Descripcion', 'Precio', 'Cantidad', 'Proveedor', 'Ruta');
+        $collectionproducts = collect(['products'=>$products]);
+        Storage::disk('resources')->put('products.json', $products);
         return redirect()->action([ProductController::class, 'index']);
     }
 
+    
     /**
      * Remove the specified resource from storage.
      *

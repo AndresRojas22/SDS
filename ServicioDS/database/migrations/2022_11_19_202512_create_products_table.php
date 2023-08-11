@@ -20,10 +20,11 @@ return new class extends Migration
             $table->double('Precio');
             $table->integer('Cantidad');
             $table->string('Proveedor');
+            $table->string('Ruta');
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *
